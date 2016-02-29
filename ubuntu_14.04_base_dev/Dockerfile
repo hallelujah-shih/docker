@@ -1,4 +1,4 @@
-from ubuntu:12.04
+from ubuntu:14.04
 
 copy sources.list.trusty /etc/apt/sources.list
 
