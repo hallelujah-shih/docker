@@ -1,0 +1,10 @@
+FROM shih/kafka:0.8.2.1
+ARG broker_id
+ARG zookeeper_hosts
+COPY kafka-entrypoint.sh /opt/kafka/bin/kafka-entrypoint.sh
+
+ENV BID=$broker_id
+ENV ZKHOST=$zookeeper_hosts
+
+ENTRYPOINT ["bash", "/opt/kafka/bin/kafka-entrypoint.sh"]
+

@@ -1,0 +1,7 @@
+FROM shih/zookeeper
+ARG myid
+COPY zoo.cfg /opt/zookeeper/conf/zoo.cfg
+COPY zookeeper-entrypoint.sh /opt/zookeeper/bin/zookeeper-entrypoint.sh
+ENV MYID=$myid
+ENTRYPOINT ["bash", "/opt/zookeeper/bin/zookeeper-entrypoint.sh"]
+
