@@ -1,0 +1,5 @@
+FROM shih/kafka:0.9.0.1
+
+WORKDIR /opt/kafka
+
+CMD ["bash"]

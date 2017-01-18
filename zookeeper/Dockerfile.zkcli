@@ -1,0 +1,7 @@
+FROM shih/zookeeper
+
+COPY zoo.cfg /opt/zookeeper/conf/zoo.cfg
+
+ENTRYPOINT ["/opt/zookeeper/bin/zkCli.sh"]
+
+CMD ["help"]
